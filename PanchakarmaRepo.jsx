@@ -1,45 +1,148 @@
 import React, { useState } from 'react';
 
 const PanchakarmaRepo = () => {
-  // Sample data for all five Panchakarma therapies
+  // Sample data for all five Panchakarma therapies with subdivisions
   const therapiesData = [
     {
       name: "Vamana",
       description: "Emesis therapy that removes excess Kapha dosha from the body through controlled vomiting. This cleansing therapy helps eliminate toxins and restore balance to the respiratory and digestive systems.",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual Panchakarma video
-      transcript: "Vamana therapy is one of the five main Panchakarma treatments. It involves the administration of emetic substances to induce controlled vomiting, which helps eliminate excess Kapha dosha from the body. This therapy is particularly beneficial for conditions related to respiratory disorders, skin diseases, and digestive issues. The process involves preparatory procedures, main treatment, and post-treatment care to ensure optimal results and patient safety."
+      subdivisions: [
+        {
+          title: "Preparation (Purva Karma)",
+          videoUrl: "https://www.youtube.com/embed/-RTwcKF8rH8",
+          transcript: "The preparation phase for Vamana therapy involves several important steps. First, the patient undergoes Snehana (oleation therapy) with medicated oils for 3-7 days to prepare the body. This is followed by Swedana (sudation therapy) to open the channels and soften the toxins. The patient is given a specific diet and lifestyle modifications. Internal oleation with ghee or oil is administered to mobilize toxins from deep tissues to the digestive tract. This phase typically lasts 7-10 days and is crucial for the success of the main procedure."
+        },
+        {
+          title: "Main Procedure (Pradhana Karma)",
+          videoUrl: "https://www.youtube.com/embed/-RTwcKF8rH8",
+          transcript: "The main Vamana procedure begins early in the morning on an empty stomach. The patient is given emetic substances like Madanaphala (Randia dumetorum) mixed with honey, rock salt, and other ingredients. The therapist monitors the patient closely as vomiting is induced. The process continues until the patient vomits clear water, indicating complete cleansing. This procedure typically lasts 2-4 hours and requires skilled supervision. The patient may experience 8-12 bouts of vomiting to achieve complete purification of the upper digestive tract and respiratory system."
+        },
+        {
+          title: "Post Care (Paschat Karma)",
+          videoUrl: "https://www.youtube.com/embed/PmyAOzD8bE0",
+          transcript: "After Vamana therapy, the patient enters a crucial recovery phase. Initially, only warm water and light gruel are given. Gradually, the diet is expanded to include easily digestible foods. The patient must avoid cold, heavy, and oily foods for several days. Rest and proper sleep are essential for recovery. The therapist monitors vital signs and provides supportive treatments like gentle massage and warm compresses. This phase lasts 7-14 days and is vital for restoring strength and ensuring the therapy's benefits are fully realized."
+        }
+      ]
     },
     {
       name: "Virechana",
       description: "Purgation therapy that balances Pitta dosha by cleansing the intestines and liver. This treatment helps remove toxins through the lower digestive tract and promotes healthy elimination.",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual Panchakarma video
-      transcript: "Virechana therapy focuses on purgation to eliminate excess Pitta dosha from the body. This treatment involves the use of purgative substances to cleanse the intestines, liver, and blood. It is highly effective for treating conditions like skin disorders, digestive problems, and inflammatory conditions. The therapy includes preparatory oil treatments, main purgation procedure, and careful post-treatment monitoring to ensure complete recovery and optimal health benefits."
+      subdivisions: [
+        {
+          title: "Preparation (Purva Karma)",
+          videoUrl: "https://www.youtube.com/embed/DG6FJWlKOV4",
+          transcript: "Virechana preparation involves deep oleation therapy to mobilize toxins from the liver and blood. The patient undergoes Snehana with Pitta-pacifying oils for 5-7 days. Internal oleation with medicated ghee helps draw toxins from deep tissues. Swedana therapy opens the channels and prepares the body for elimination. A specific diet rich in bitter and astringent tastes is recommended. The patient must avoid spicy, sour, and hot foods. This preparation phase is essential for effective toxin mobilization and safe purgation."
+        },
+        {
+          title: "Main Procedure (Pradhana Karma)",
+          videoUrl: "https://www.youtube.com/embed/DG6FJWlKOV4",
+          transcript: "The main Virechana procedure involves administering purgative substances like Trivrit (Operculina turpethum) or other Pitta-pacifying herbs. The purgative is given in the morning on an empty stomach. The therapist monitors the patient as purgation begins, typically within 2-4 hours. The process continues until the patient passes clear water, indicating complete cleansing of the intestines and liver. This procedure may last 6-12 hours and requires constant supervision. The patient experiences multiple bowel movements to eliminate accumulated toxins and excess Pitta dosha."
+        },
+        {
+          title: "Post Care (Paschat Karma)",
+          videoUrl: "https://www.youtube.com/embed/DG6FJWlKOV4",
+          transcript: "Post-Virechana care focuses on restoring digestive fire and strength. The patient begins with warm water and light gruel, gradually progressing to easily digestible foods. Cooling and nourishing foods are emphasized to balance Pitta. The patient must avoid hot, spicy, and sour foods for several days. Rest and proper hydration are crucial. The therapist provides supportive treatments and monitors for any complications. This recovery phase lasts 7-10 days and is essential for consolidating the therapy's benefits."
+        }
+      ]
     },
     {
       name: "Basti",
       description: "Enema therapy that regulates Vata dosha through medicated enemas. This powerful treatment nourishes the body while eliminating toxins and is considered the most important Panchakarma therapy.",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual Panchakarma video
-      transcript: "Basti therapy is often called the 'king of all treatments' in Ayurveda. It involves the administration of medicated enemas to balance Vata dosha, which is considered the most important dosha as it governs all bodily movements and functions. There are two main types: Niruha Basti (cleansing enema) and Anuvasana Basti (oil enema). This therapy is highly effective for treating neurological disorders, musculoskeletal problems, and digestive issues while providing deep nourishment to the body."
+      subdivisions: [
+        {
+          title: "Preparation (Purva Karma)",
+          videoUrl: "https://www.youtube.com/embed/DG6FJWlKOV4",
+          transcript: "Basti preparation involves extensive oleation therapy to prepare the colon and mobilize Vata. The patient undergoes Snehana with Vata-pacifying oils for 7-10 days. Internal oleation with medicated ghee helps lubricate the digestive tract. Swedana therapy opens the channels and prepares the body. A Vata-pacifying diet with warm, moist, and nourishing foods is essential. The patient must avoid cold, dry, and rough foods. This preparation phase is crucial for the success of Basti therapy and typically lasts 10-15 days."
+        },
+        {
+          title: "Niruha Basti (Cleansing Enema)",
+          videoUrl: "https://www.youtube.com/embed/DG6FJWlKOV4",
+          transcript: "Niruha Basti is the cleansing enema that eliminates toxins and excess Vata. It contains decoctions of Vata-pacifying herbs, honey, rock salt, and medicated oils. The enema is administered in the morning after proper preparation. The patient retains the enema for 15-30 minutes before elimination. This procedure is repeated for 5-15 days depending on the condition. Niruha Basti helps cleanse the colon, remove toxins, and balance Vata dosha. It's particularly effective for digestive disorders, neurological conditions, and musculoskeletal problems."
+        },
+        {
+          title: "Anuvasana Basti (Oil Enema)",
+          videoUrl: "https://www.youtube.com/embed/DG6FJWlKOV4",
+          transcript: "Anuvasana Basti is the nourishing oil enema that provides deep nourishment and strengthens the body. It contains medicated oils with Vata-pacifying herbs. This enema is administered after Niruha Basti or as a standalone treatment. The patient retains the oil for 1-2 hours for maximum absorption. Anuvasana Basti nourishes the tissues, strengthens the nervous system, and provides deep healing. It's particularly beneficial for weakness, debility, and chronic Vata disorders. This treatment is often alternated with Niruha Basti for optimal results."
+        },
+        {
+          title: "Post Care (Paschat Karma)",
+          videoUrl: "https://www.youtube.com/embed/DG6FJWlKOV4",
+          transcript: "Post-Basti care is crucial for maintaining the therapy's benefits. The patient follows a Vata-pacifying diet with warm, moist, and nourishing foods. Regular oil massage and warm baths help maintain the therapeutic effects. The patient must avoid cold, dry, and rough foods. Proper rest and stress management are essential. The therapist monitors the patient's progress and provides supportive treatments. This care phase lasts 15-30 days and is vital for consolidating the deep healing effects of Basti therapy."
+        }
+      ]
     },
     {
       name: "Nasya",
       description: "Nasal therapy that cleanses the head region and upper respiratory tract. This treatment administers medicated oils or powders through the nostrils to treat conditions affecting the head and neck.",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual Panchakarma video
-      transcript: "Nasya therapy involves the administration of medicated substances through the nasal passages to cleanse and treat the head region. This therapy is particularly effective for conditions affecting the brain, eyes, ears, nose, and throat. The treatment helps eliminate toxins from the head area, improves circulation, and enhances mental clarity. Different types of Nasya include oil-based, powder-based, and decoction-based treatments, each suited for specific conditions and dosha imbalances."
+      subdivisions: [
+        {
+          title: "Preparation (Purva Karma)",
+          videoUrl: "https://www.youtube.com/embed/DG6FJWlKOV4",
+          transcript: "Nasya preparation involves cleansing the head and neck region. The patient undergoes gentle massage of the head, neck, and shoulders with medicated oils. Steam therapy helps open the nasal passages and prepare the area. The patient must avoid cold foods and exposure to cold air. A light diet is recommended to avoid congestion. This preparation phase typically lasts 3-5 days and is essential for effective nasal administration and absorption of the medicated substances."
+        },
+        {
+          title: "Oil Nasya (Sneha Nasya)",
+          videoUrl: "https://www.youtube.com/embed/DG6FJWlKOV4",
+          transcript: "Oil Nasya involves administering medicated oils through the nostrils. The patient lies in a supine position with the head tilted back. Warm medicated oil is instilled drop by drop into each nostril. The patient inhales deeply to draw the oil into the nasal passages and sinuses. This treatment helps lubricate the nasal passages, improves circulation, and provides nourishment to the head region. Oil Nasya is particularly beneficial for dryness, headaches, and neurological conditions. The treatment is typically administered for 7-14 days."
+        },
+        {
+          title: "Powder Nasya (Churna Nasya)",
+          videoUrl: "https://www.youtube.com/embed/DG6FJWlKOV4",
+          transcript: "Powder Nasya involves administering fine medicated powders through the nostrils. The patient inhales the powder through each nostril alternately. This treatment helps cleanse the nasal passages, reduce congestion, and eliminate toxins from the head region. Powder Nasya is particularly effective for sinusitis, nasal congestion, and respiratory disorders. The treatment stimulates the nasal mucosa and helps clear accumulated mucus and toxins. This procedure is typically performed for 5-10 days depending on the condition."
+        },
+        {
+          title: "Post Care (Paschat Karma)",
+          videoUrl: "https://www.youtube.com/embed/DG6FJWlKOV4",
+          transcript: "Post-Nasya care involves protecting the head and neck region. The patient must avoid cold exposure, wind, and dust. Warm foods and drinks are recommended to maintain the therapeutic effects. Gentle massage of the head and neck helps maintain circulation. The patient should avoid excessive talking, reading, or screen time. Proper rest and sleep are essential for recovery. This care phase typically lasts 3-7 days and is crucial for maintaining the benefits of Nasya therapy."
+        }
+      ]
     },
     {
       name: "Rakta Moksha",
       description: "Bloodletting therapy that detoxifies the blood by removing impure blood. This specialized treatment helps eliminate toxins from the bloodstream and improves overall circulation and health.",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual Panchakarma video
-      transcript: "Rakta Moksha, or bloodletting therapy, is a specialized Panchakarma treatment that focuses on purifying the blood by removing impure or toxic blood from the body. This therapy is particularly beneficial for blood-related disorders, skin conditions, and inflammatory diseases. The procedure involves careful extraction of small amounts of blood from specific points, followed by proper wound care and monitoring. It helps improve blood circulation, reduces inflammation, and promotes the production of fresh, healthy blood cells."
+      subdivisions: [
+        {
+          title: "Preparation (Purva Karma)",
+          videoUrl: "https://www.youtube.com/embed/DG6FJWlKOV4",
+          transcript: "Rakta Moksha preparation involves assessing the patient's blood quality and overall health. The patient undergoes Snehana and Swedana to mobilize toxins into the blood. A Pitta-pacifying diet helps prepare the blood for purification. The patient must avoid hot, spicy, and sour foods. Blood tests may be performed to assess the current state. This preparation phase typically lasts 5-7 days and is essential for safe and effective bloodletting. The therapist evaluates the patient's suitability for the procedure."
+        },
+        {
+          title: "Leech Therapy (Jalauka)",
+          videoUrl: "https://www.youtube.com/embed/DG6FJWlKOV4",
+          transcript: "Leech therapy is a gentle form of bloodletting using medicinal leeches. The leeches are applied to specific points on the body where toxins have accumulated. They naturally extract impure blood while releasing beneficial enzymes. This method is particularly effective for skin disorders, inflammatory conditions, and localized blood stagnation. The procedure is relatively painless and provides precise blood removal. Leech therapy is often preferred for sensitive areas and provides additional therapeutic benefits through the leeches' natural healing properties."
+        },
+        {
+          title: "Venipuncture (Sira Vyadha)",
+          videoUrl: "https://www.youtube.com/embed/DG6FJWlKOV4",
+          transcript: "Venipuncture involves carefully extracting blood from specific veins using sterile techniques. The procedure is performed by trained therapists using appropriate medical instruments. Small amounts of blood are removed from strategic points to eliminate toxins and improve circulation. This method is particularly effective for systemic blood purification and treating blood-related disorders. The procedure requires precise knowledge of anatomy and proper sterilization techniques. Venipuncture is often combined with other Panchakarma treatments for comprehensive detoxification."
+        },
+        {
+          title: "Post Care (Paschat Karma)",
+          videoUrl: "https://www.youtube.com/embed/DG6FJWlKOV4",
+          transcript: "Post-Rakta Moksha care focuses on blood regeneration and wound healing. The patient follows a Pitta-pacifying diet rich in iron and blood-building nutrients. Cooling foods and drinks help balance the blood. Proper wound care is essential for any puncture sites. The patient must avoid hot, spicy, and sour foods that can aggravate the blood. Rest and proper hydration are crucial for recovery. This care phase typically lasts 7-14 days and is essential for complete healing and blood regeneration."
+        }
+      ]
     }
   ];
 
-  // State to track the currently selected therapy
+  // State to track the currently selected therapy and subdivision
   const [selectedTherapy, setSelectedTherapy] = useState(0);
+  const [selectedSubdivision, setSelectedSubdivision] = useState(0);
 
-  // Get the currently selected therapy data
+  // Get the currently selected therapy and subdivision data
   const currentTherapy = therapiesData[selectedTherapy];
+  const currentSubdivision = currentTherapy?.subdivisions[selectedSubdivision];
+
+  // Handle therapy selection
+  const handleTherapySelect = (therapyIndex) => {
+    setSelectedTherapy(therapyIndex);
+    setSelectedSubdivision(0); // Reset to first subdivision when therapy changes
+  };
+
+  // Handle subdivision selection
+  const handleSubdivisionSelect = (subdivisionIndex) => {
+    setSelectedSubdivision(subdivisionIndex);
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
@@ -50,37 +153,58 @@ const PanchakarmaRepo = () => {
             Panchakarma Educational Repository
           </h1>
           <p className="text-lg text-gray-600">
-            Explore the five main Panchakarma therapies for holistic healing
+            Explore the five main Panchakarma therapies and their detailed procedures
           </p>
         </div>
 
         {/* Main Content Container */}
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-          <div className="flex h-[600px]">
-            {/* Left Sidebar - Therapy List */}
-            <div className="w-1/3 bg-gray-100 border-r border-gray-200">
+          <div className="flex h-[700px]">
+            {/* Left Sidebar - Therapy List with Subdivisions */}
+            <div className="w-1/3 bg-gray-100 border-r border-gray-200 overflow-y-auto">
               <div className="p-6">
                 <h2 className="text-xl font-semibold text-gray-800 mb-4">
                   Panchakarma Therapies
                 </h2>
-                <div className="space-y-2">
-                  {therapiesData.map((therapy, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setSelectedTherapy(index)}
-                      className={`w-full text-left p-4 rounded-lg transition-all duration-200 ${
-                        selectedTherapy === index
-                          ? 'bg-blue-500 text-white shadow-md transform scale-105'
-                          : 'bg-white text-gray-700 hover:bg-gray-50 hover:shadow-sm'
-                      }`}
-                    >
-                      <div className="font-medium">{therapy.name}</div>
-                      <div className={`text-sm mt-1 ${
-                        selectedTherapy === index ? 'text-blue-100' : 'text-gray-500'
-                      }`}>
-                        {therapy.description.substring(0, 60)}...
-                      </div>
-                    </button>
+                <div className="space-y-3">
+                  {therapiesData.map((therapy, therapyIndex) => (
+                    <div key={therapyIndex} className="space-y-2">
+                      {/* Main Therapy Button */}
+                      <button
+                        onClick={() => handleTherapySelect(therapyIndex)}
+                        className={`w-full text-left p-4 rounded-lg transition-all duration-200 ${
+                          selectedTherapy === therapyIndex
+                            ? 'bg-blue-500 text-white shadow-md'
+                            : 'bg-white text-gray-700 hover:bg-gray-50 hover:shadow-sm'
+                        }`}
+                      >
+                        <div className="font-medium">{therapy.name}</div>
+                        <div className={`text-sm mt-1 ${
+                          selectedTherapy === therapyIndex ? 'text-blue-100' : 'text-gray-500'
+                        }`}>
+                          {therapy.description.substring(0, 50)}...
+                        </div>
+                      </button>
+
+                      {/* Subdivisions - Show only for selected therapy */}
+                      {selectedTherapy === therapyIndex && (
+                        <div className="ml-4 space-y-1">
+                          {therapy.subdivisions.map((subdivision, subdivisionIndex) => (
+                            <button
+                              key={subdivisionIndex}
+                              onClick={() => handleSubdivisionSelect(subdivisionIndex)}
+                              className={`w-full text-left p-3 rounded-md text-sm transition-all duration-200 ${
+                                selectedSubdivision === subdivisionIndex
+                                  ? 'bg-blue-600 text-white shadow-sm'
+                                  : 'bg-blue-50 text-blue-700 hover:bg-blue-100'
+                              }`}
+                            >
+                              {subdivision.title}
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </div>
               </div>
@@ -88,12 +212,19 @@ const PanchakarmaRepo = () => {
 
             {/* Right Content Area */}
             <div className="flex-1 p-6 overflow-y-auto">
-              {currentTherapy && (
+              {currentTherapy && currentSubdivision && (
                 <div className="space-y-6">
+                  {/* Breadcrumb */}
+                  <div className="text-sm text-gray-500 mb-2">
+                    <span className="font-medium">{currentTherapy.name}</span>
+                    <span className="mx-2">→</span>
+                    <span>{currentSubdivision.title}</span>
+                  </div>
+
                   {/* Title and Description */}
                   <div>
                     <h2 className="text-3xl font-bold text-gray-800 mb-3">
-                      {currentTherapy.name}
+                      {currentSubdivision.title}
                     </h2>
                     <p className="text-lg text-gray-600 leading-relaxed">
                       {currentTherapy.description}
@@ -103,8 +234,8 @@ const PanchakarmaRepo = () => {
                   {/* Video Player */}
                   <div className="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
                     <iframe
-                      src={currentTherapy.videoUrl}
-                      title={`${currentTherapy.name} Therapy Video`}
+                      src={currentSubdivision.videoUrl}
+                      title={`${currentSubdivision.title} Video`}
                       className="w-full h-64 md:h-80"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -115,11 +246,11 @@ const PanchakarmaRepo = () => {
                   {/* Transcript Section */}
                   <div>
                     <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                      Therapy Transcript
+                      Procedure Details
                     </h3>
                     <div className="bg-gray-50 rounded-lg p-4 h-40 overflow-y-scroll border border-gray-200">
                       <p className="text-gray-700 leading-relaxed">
-                        {currentTherapy.transcript}
+                        {currentSubdivision.transcript}
                       </p>
                     </div>
                   </div>
@@ -131,7 +262,7 @@ const PanchakarmaRepo = () => {
 
         {/* Footer */}
         <div className="mt-8 text-center text-gray-500">
-          <p>Educational content for learning about traditional Panchakarma therapies</p>
+          <p>Educational content for learning about traditional Panchakarma therapies and procedures</p>
         </div>
       </div>
     </div>
